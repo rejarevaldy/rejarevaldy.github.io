@@ -58,7 +58,7 @@
           charactor = chars.shift();
           // aboutMe.innerHTML += getCharColor(charactor);
           containEl.innerHTML += charactor;
-          setTimeout(type, 100);
+          setTimeout(type, 69);
         } else {
           cb && cb();
           defer.resolve();
