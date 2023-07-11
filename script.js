@@ -6,7 +6,6 @@
 
 !(function () {
   var aboutMe = document.getElementById("about-me");
-  // var color = ['#0e96a2', '#67a61c', '#fff', '#fff', '#fff'];
   var color = ["#fff", "#fff", "#fff"];
   var charactor = "";
 
@@ -15,7 +14,7 @@
     return '<span style="color:' + color[index] + '">' + charactor + "</span>";
   }
 
-  // 简单的promise
+  //promise
   var Promise = function () {
     this.thens = [];
   };
@@ -34,7 +33,6 @@
     }
   };
 
-  // 函数科里化
   var step = function (opts) {
     opts = opts || {};
     var cmd = opts.cmd || "";
@@ -56,14 +54,13 @@
       setTimeout(function type() {
         if (chars.length !== 0) {
           charactor = chars.shift();
-          // aboutMe.innerHTML += getCharColor(charactor);
           containEl.innerHTML += charactor;
-          setTimeout(type, 69);
+          setTimeout(type, 30);
         } else {
           cb && cb();
           defer.resolve();
         }
-      }, 100);
+      }, 30);
       return defer;
     };
   };
